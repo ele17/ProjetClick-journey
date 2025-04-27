@@ -1,0 +1,67 @@
+[
+  {
+    "login": "admin1",
+    "password": "$2y$10$abcdef...", 
+    "role": "admin",
+    "name": "Admin Principal",
+    "pseudo": "adminmaster",
+    "birthdate": "1990-01-01",
+    "address": "Paris",
+    "registered_at": "2025-01-01",
+    "last_login": "",
+    "viewed_trips": [],
+    "purchased_trips": []
+  },
+  {
+    "login": "admin2",
+    "password": "$2y$10$abcdef...", 
+    "role": "admin",
+    "name": "Admin Secondaire",
+    "pseudo": "backupadmin",
+    "birthdate": "1992-02-02",
+    "address": "Paris",
+    "registered_at": "2025-01-02",
+    "last_login": "",
+    "viewed_trips": [],
+    "purchased_trips": []
+  },
+  {
+    "login": "lisa75",
+    "password": "$2y$10$abcdef...", 
+    "role": "normal",
+    "name": "Lisa Martin",
+    "pseudo": "lisam",
+    "birthdate": "2003-07-10",
+    "address": "10 rue Oberkampf, Paris",
+    "registered_at": "2025-03-05",
+    "last_login": "",
+    "viewed_trips": [1, 2],
+    "purchased_trips": [2]
+  },
+  {
+    "login": "nicoBar",
+    "password": "$2y$10$abcdef...", 
+    "role": "normal",
+    "name": "Nicolas Dupuis",
+    "pseudo": "nbar",
+    "birthdate": "2000-11-22",
+    "address": "5 rue de Lappe, Paris",
+    "registered_at": "2025-03-12",
+    "last_login": "",
+    "viewed_trips": [],
+    "purchased_trips": []
+  },
+  {
+    "login": "emmaB",
+    "password": "$2y$10$abcdef...", 
+    "role": "normal",
+    "name": "Emma Bernard",
+    "pseudo": "emmb",
+    "birthdate": "2002-05-15",
+    "address": "3 rue Saint-Maur, Paris",
+    "registered_at": "2025-03-15",
+    "last_login": "",
+    "viewed_trips": [],
+    "purchased_trips": [1]
+  }
+]

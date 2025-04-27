@@ -1,0 +1,22 @@
+[
+    {
+        "id": "opt1",
+        "nom": "Sans alcool"
+    },
+    {
+        "id": "opt2",
+        "nom": "Enfants bienvenus"
+    },
+    {
+        "id": "opt3",
+        "nom": "Option végane"
+    },
+    {
+        "id": "opt4",
+        "nom": "Départ tardif"
+    },
+    {
+        "id": "opt5",
+        "nom": "Privatisation possible"
+    }
+]

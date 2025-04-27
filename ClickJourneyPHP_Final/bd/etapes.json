@@ -1,0 +1,65 @@
+[
+    {
+        "circuit_id": "c1",
+        "etape": 1,
+        "nom": "Le Syndicat",
+        "adresse": "51 Rue du Faubourg Saint-Denis",
+        "note": "4.8"
+    },
+    {
+        "circuit_id": "c1",
+        "etape": 2,
+        "nom": "Little Red Door",
+        "adresse": "60 Rue Charlot",
+        "note": "4.7"
+    },
+    {
+        "circuit_id": "c1",
+        "etape": 3,
+        "nom": "Bisou",
+        "adresse": "15 Boulevard du Temple",
+        "note": "4.5"
+    },
+    {
+        "circuit_id": "c2",
+        "etape": 1,
+        "nom": "Moonshiner",
+        "adresse": "5 Rue Sedaine",
+        "note": "4.6"
+    },
+    {
+        "circuit_id": "c2",
+        "etape": 2,
+        "nom": "Lavomatic",
+        "adresse": "30 Rue René Boulanger",
+        "note": "4.4"
+    },
+    {
+        "circuit_id": "c2",
+        "etape": 3,
+        "nom": "L’Experimental Cocktail Club",
+        "adresse": "37 Rue Saint-Sauveur",
+        "note": "4.6"
+    },
+    {
+        "circuit_id": "c3",
+        "etape": 1,
+        "nom": "Le China",
+        "adresse": "50 Rue de Charenton",
+        "note": "4.5"
+    },
+    {
+        "circuit_id": "c3",
+        "etape": 2,
+        "nom": "Le Piano Vache",
+        "adresse": "8 Rue Laplace",
+        "note": "4.3"
+    },
+    {
+        "circuit_id": "c3",
+        "etape": 3,
+        "nom": "Chez Georges",
+        "adresse": "11 Rue des Canettes",
+        "note": "4.4"
+    }
+]
