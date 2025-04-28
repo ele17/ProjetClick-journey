@@ -31,7 +31,7 @@ $total_price = 0;
 foreach ($selectedTrip["steps"] as $stepId) {
     foreach ($steps as $step) {
         if ($step["id"] == $stepId) {
-            echo "<h3>📍 Étape : {$step["title"]}</h3>";
+            echo "<h3> Étape : {$step["title"]}</h3>";
             foreach ($step["options"] as $optId) {
                 foreach ($options as $opt) {
                     if ($opt["id"] == $optId) {
@@ -50,7 +50,7 @@ foreach ($selectedTrip["steps"] as $stepId) {
     }
 }
 
-echo "<h3>💰 Total personnalisé : $total_price €</h3>";
+echo "<h3> Total personnalisé : $total_price €</h3>";
 ?>
 
 <form method="POST" action="paiement.php">
