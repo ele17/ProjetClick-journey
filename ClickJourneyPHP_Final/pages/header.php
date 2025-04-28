@@ -17,7 +17,7 @@ session_start(); // Démarrage de la session
                 <li><a href="/ClickJourneyPHP/pages/admin.php">Admin</a></li>
             <?php endif; ?>
             <li><a href="/ClickJourneyPHP/pages/logout.php">Déconnexion</a></li>
-            <li>👋 Bienvenue, <?= htmlspecialchars($_SESSION['pseudo']) ?></li>
+            <li> Bienvenue, <?= htmlspecialchars($_SESSION['pseudo']) ?></li>
         <?php else: ?>
             <li><a href="/ClickJourneyPHP/pages/connexion.php">Connexion</a></li>
             <li><a href="/ClickJourneyPHP/pages/inscription.php">Inscription</a></li>
