@@ -18,7 +18,7 @@ $api_key = getAPIKey($vendeur);
 $control = md5($api_key . "#" . $transaction . "#" . $totalPrice . "#" . $vendeur . "#" . $retour_url . "#");
 ?>
 
-<h2>💳 Paiement de votre barathon</h2>
+<h2> Paiement de votre barathon</h2>
 <p>Montant à payer : <?= number_format($totalPrice, 2, '.', '') ?> €</p>
 
 <form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">
