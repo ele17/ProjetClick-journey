@@ -17,10 +17,10 @@ foreach ($users as $user) {
     }
 }
 
-echo "<h2>Bienvenue " . htmlspecialchars($login) . " 👋</h2>";
+echo "<h2>Bienvenue " . htmlspecialchars($login) . " </h2>";
 
 // Barathons achetés
-echo "<h3>🧾 Vos barathons achetés :</h3>";
+echo "<h3> Vos barathons achetés :</h3>";
 if (!empty($user_trips)) {
     echo "<ul>";
     foreach ($trips as $trip) {
@@ -34,7 +34,7 @@ if (!empty($user_trips)) {
 }
 
 // Paiements réalisés
-echo "<h3>💳 Vos paiements enregistrés :</h3>";
+echo "<h3> Vos paiements enregistrés :</h3>";
 $userPayments = array_filter($payments, function($payment) use ($login) {
     return $payment["user"] === $login;
 });
