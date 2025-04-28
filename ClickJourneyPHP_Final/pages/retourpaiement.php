@@ -23,7 +23,7 @@ if ($control_calcule !== $control_recu) {
 }
 
 if ($status === "accepted") {
-    echo "<h2>Paiement accepté ! Merci pour votre confiance 🍻</h2>";
+    echo "<h2>Paiement accepté ! Merci pour votre confiance </h2>";
 
     // Enregistrement de la transaction
     $payments = file_exists("../data/payments.json") ? json_decode(file_get_contents("../data/payments.json"), true) : [];
@@ -41,6 +41,6 @@ if ($status === "accepted") {
     echo "<a href='profil.php'>Voir mes barathons achetés</a>";
 
 } else {
-    echo "<h2>❌ Paiement refusé.</h2>";
+    echo "<h2> Paiement refusé.</h2>";
     echo "<a href='accueil.php'>Retourner à l'accueil</a>";
 }
