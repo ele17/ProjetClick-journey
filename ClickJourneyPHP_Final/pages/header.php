@@ -1,5 +1,4 @@
 <?php
-session_start(); // Démarrage de la session
 ?>
 <link rel="stylesheet" href="/ClickJourneyPHP/style.css">
 
