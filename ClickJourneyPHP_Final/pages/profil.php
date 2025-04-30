@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../partials/header.php';
+include 'header.php';
 
 // Vérification de la connexion utilisateur
 if (!isset($_SESSION['login'])) {
