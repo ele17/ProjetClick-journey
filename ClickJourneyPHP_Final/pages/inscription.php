@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../partials/header.php';
+include 'header.php';
 
 // Traitement du formulaire d'inscription
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
