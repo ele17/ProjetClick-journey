@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../partials/header.php';
+include 'header.php';
 
 // Vérification que l'utilisateur est connecté et est administrateur
 if (!isset($_SESSION['login']) || $_SESSION['role'] !== 'admin') {
