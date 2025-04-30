@@ -9,7 +9,7 @@ if (!isset($_POST["trip_id"]) || !isset($_POST["total_price"])) {
 
 $tripId = intval($_POST["trip_id"]);
 $totalPrice = floatval($_POST["total_price"]);
-$vendeur = "MI-2_A"; // À adapter avec ton groupe !
+$vendeur = "MI-2_A";
 $transaction = uniqid(); // Génère un ID unique
 $retour_url = "http://localhost/retour_paiement.php"; // URL où l'utilisateur reviendra
 $api_key = getAPIKey($vendeur);
