@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("../includes/getapikey.php");
+require_once 'getapikey.php';
 
 if (!isset($_POST["trip_id"]) || !isset($_POST["total_price"])) {
     echo "Erreur : données manquantes.";
