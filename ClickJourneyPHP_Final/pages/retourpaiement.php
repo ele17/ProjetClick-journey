@@ -1,19 +1,35 @@
-require_once('getapikey.php'); 
+<?php
+session_start();
+require('getapikey.php');
 
-$transaction = uniqid();
-$montant = number_format(180.99, 2, '.', ''); // exemple de montant
-$vendeur = 'MIM-1_F'; 
-$retour = 'http://localhost/ClickJourneyPHP/pages/retourpaiement.php?session=s123';
+// Récupération des données depuis l’URL (en GET)
+$transaction = $_GET['transaction'] ?? '';
+$montant     = $_GET['montant'] ?? '';
+$vendeur     = $_GET['vendeur'] ?? '';
+$statut      = $_GET['status'] ?? '';  // 'accepted' ou autre
+$control_recu = $_GET['control'] ?? '';
 
+// Vérifie que toutes les données sont présentes
+if (!$transaction || !$montant || !$vendeur || !$statut || !$control_recu) {
+    echo "❌ Erreur : données manquantes dans l’URL de retour.";
+    exit;
+}
+
+// Récupération de la clé API du vendeur
 $api_key = getAPIKey($vendeur);
-$control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
-?>
 
-<form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">
-  <input type="hidden" name="transaction" value="<?php echo $transaction; ?>">
-  <input type="hidden" name="montant" value="<?php echo $montant; ?>">
-  <input type="hidden" name="vendeur" value="<?php echo $vendeur; ?>">
-  <input type="hidden" name="retour" value="<?php echo $retour; ?>">
-  <input type="hidden" name="control" value="<?php echo $control; ?>">
-  <input type="submit" value="Valider et payer">
-</form>
+// Recalcule du hash attendu
+$control_attendu = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $statut . "#");
+
+// Comparaison du hash
+if ($control_attendu !== $control_recu) {
+    echo "<h2> Erreur de sécurité : vérification du paiement échouée.</h2>";
+    exit;
+}
+
+// Affichage du résultat selon le statut
+if ($statut === 'accepted') {
+    echo "<h2>✅ Paiement accepté ! Merci pour votre commande.</h2>";
+} else {
+    echo "<h2>❌ Paiement refusé. Veuillez réessayer.</h2>";
+}
