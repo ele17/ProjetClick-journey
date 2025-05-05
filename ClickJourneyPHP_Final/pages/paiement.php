@@ -1,11 +1,9 @@
 <?php
 session_start();
 require('getapikey.php');
+include 'header.php';
 
-$montant_total=10.00;
-
-// Enregistrement en session pour usage ultérieur
-$_SESSION['montant_total'] = $montant_total;
+$montant_total=38.00;
 
 // Préparation des données pour CYBank
 $montant = number_format((float)$montant_total, 2, '.', '');
