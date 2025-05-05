@@ -25,9 +25,9 @@ include 'header.php';
             <h2><?= htmlspecialchars($circuit['titre']) ?></h2>
             <p><strong>Résumé :</strong> <?= htmlspecialchars($circuit['resume']) ?></p>
             <p>
-                 Durée : <?= htmlspecialchars($circuit['duree']) ?> |
-                 Difficulté : <?= htmlspecialchars($circuit['difficulte']) ?> |
-                 Prix : <?= htmlspecialchars($circuit['prix']) ?>
+                ⏳ Durée : <?= htmlspecialchars($circuit['duree']) ?> |
+                🎯 Difficulté : <?= htmlspecialchars($circuit['difficulte']) ?> |
+                💸 Prix : <?= htmlspecialchars($circuit['prix']) ?>
             </p>
 
             <!-- Affichage des étapes liées à ce circuit -->
