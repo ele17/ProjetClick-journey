@@ -1,31 +1,40 @@
 <?php
 session_start();
-require_once 'getapikey.php';
+require('getapikey.php');
 
-if (!isset($_POST["trip_id"]) || !isset($_POST["total_price"])) {
-    echo "Erreur : données manquantes.";
-    exit;
-}
+$montant_total=10.00;
 
-$tripId = intval($_POST["trip_id"]);
-$totalPrice = floatval($_POST["total_price"]);
-$vendeur = "MI-2_A";
-$transaction = uniqid(); // Génère un ID unique
-$retour_url = "http://localhost/retour_paiement.php"; // URL où l'utilisateur reviendra
+// Enregistrement en session pour usage ultérieur
+$_SESSION['montant_total'] = $montant_total;
+
+// Préparation des données pour CYBank
+$montant = number_format((float)$montant_total, 2, '.', '');
+$transaction = uniqid();
+$vendeur = 'MIM_F';
+$retour = "http://localhost/PHPtest/ClickJourneyPHP/pages/retourpaiement.php?session=" . session_id();
 $api_key = getAPIKey($vendeur);
 
-// Construction de la valeur de contrôle
-$control = md5($api_key . "#" . $transaction . "#" . $totalPrice . "#" . $vendeur . "#" . $retour_url . "#");
+// Calcul du hash de contrôle
+$control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
 ?>
 
-<h2> Paiement de votre barathon</h2>
-<p>Montant à payer : <?= number_format($totalPrice, 2, '.', '') ?> €</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Paiement</title>
+</head>
+<body>
+    <h2>Récapitulatif du paiement</h2>
+    <p>Montant total à payer : <strong><?= htmlspecialchars($montant) ?> €</strong></p>
 
-<form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">
-    <input type="hidden" name="transaction" value="<?= $transaction ?>">
-    <input type="hidden" name="montant" value="<?= number_format($totalPrice, 2, '.', '') ?>">
-    <input type="hidden" name="vendeur" value="<?= $vendeur ?>">
-    <input type="hidden" name="retour" value="<?= $retour_url ?>">
-    <input type="hidden" name="control" value="<?= $control ?>">
-    <input type="submit" value="Payer maintenant">
-</form>
+    <form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">
+        <input type="hidden" name="transaction" value="<?= htmlspecialchars($transaction) ?>">
+        <input type="hidden" name="montant" value="<?= htmlspecialchars($montant) ?>">
+        <input type="hidden" name="vendeur" value="<?= htmlspecialchars($vendeur) ?>">
+        <input type="hidden" name="retour" value="<?= htmlspecialchars($retour) ?>">
+        <input type="hidden" name="control" value="<?= htmlspecialchars($control) ?>">
+        <input type="submit" value="Payer maintenant">
+    </form>
+</body>
+</html>
