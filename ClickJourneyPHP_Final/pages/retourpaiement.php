@@ -1,6 +1,7 @@
 <?php
 session_start();
 require('getapikey.php');
+include 'header.php';
 
 // Récupération des données depuis l’URL (en GET)
 $transaction = $_GET['transaction'] ?? '';
