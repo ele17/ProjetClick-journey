@@ -1,6 +1,6 @@
 <?php
 ?>
-<link rel="stylesheet" href="/ClickJourneyPHP/style.css">
+<link rel="stylesheet" href="../style.css">
 
 <div class="header-container">
     <h1>ClickJourney</h1>
