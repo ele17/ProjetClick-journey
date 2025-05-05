@@ -8,18 +8,19 @@
 
 <nav class="nav-container">
     <ul>
-        <li><a href="/ClickJourneyPHP/pages/accueil.php">Accueil</a></li>
+        <li><a href="accueil.php">Accueil</a></li>
 
         <?php if (isset($_SESSION['login'])): ?>
-            <li><a href="/ClickJourneyPHP/pages/profil.php">Profil</a></li>
+            <li><a href="profil.php">Profil</a></li>
             <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-                <li><a href="/ClickJourneyPHP/pages/admin.php">Admin</a></li>
+                <li><a href="admin.php">Admin</a></li>
             <?php endif; ?>
-            <li><a href="/ClickJourneyPHP/pages/logout.php">Déconnexion</a></li>
+            <li><a href="logout.php">Déconnexion</a></li>
             <li> Bienvenue, <?= htmlspecialchars($_SESSION['pseudo']) ?></li>
         <?php else: ?>
-            <li><a href="/ClickJourneyPHP/pages/connexion.php">Connexion</a></li>
-            <li><a href="/ClickJourneyPHP/pages/inscription.php">Inscription</a></li>
+            <li><a href="connexion.php">Connexion</a></li>
+            <li><a href="inscription.php">Inscription</a></li>
+            <li><a href="paiement.php">Passez au paiement</a></li>
         <?php endif; ?>
     </ul>
 </nav>
