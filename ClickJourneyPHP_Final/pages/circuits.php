@@ -18,8 +18,18 @@ include 'header.php';
         exit;
     }
 
-    // Affichage de chaque circuit
-    foreach ($parcours as $circuit):
+    // Filtrage d'un circuit spécifique via l'URL ?id=...
+    $circuit_selectionne = null;
+    if (isset($_GET['id'])) {
+        foreach ($parcours as $c) {
+            if ($c['id'] === $_GET['id']) {
+                $circuit_selectionne = $c;
+                break;
+            }
+        }
+    }
+
+    foreach (($circuit_selectionne ? [$circuit_selectionne] : $parcours) as $circuit):
     ?>
         <div style="margin-bottom: 2em; padding: 1em; border: 1px solid #ccc; border-radius: 8px; background-color: #2c2533;">
             <h2><?= htmlspecialchars($circuit['titre']) ?></h2>
@@ -30,7 +40,6 @@ include 'header.php';
                 💸 Prix : <?= htmlspecialchars($circuit['prix']) ?>
             </p>
 
-            <!-- Affichage des étapes liées à ce circuit -->
             <h3>Étapes du parcours :</h3>
             <ul>
             <?php foreach ($etapes as $etape): ?>
@@ -40,13 +49,14 @@ include 'header.php';
             <?php endforeach; ?>
             </ul>
 
-            <!-- Liste des options globales -->
             <h4>Options disponibles :</h4>
             <ul>
                 <?php foreach ($options as $opt): ?>
                     <li><?= htmlspecialchars($opt['nom']) ?></li>
                 <?php endforeach; ?>
             </ul>
+
+            <a href="ajouterpanier.php?id=<?= urlencode($circuit['id']) ?>" style="display:inline-block; margin-top:1em; padding:8px 16px; background:#4CAF50; color:white; border-radius:5px; text-decoration:none;">Ajouter au panier</a>
         </div>
     <?php endforeach; ?>
 </div>
