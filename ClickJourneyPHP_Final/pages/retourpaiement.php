@@ -39,3 +39,4 @@ if ($statut === 'accepted') {
     echo "<p>Retour au panier dans quelques secondes...</p>";
     header("refresh:4;url=panier.php");
 }
+?>
