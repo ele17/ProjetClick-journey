@@ -4,9 +4,10 @@ include 'header.php';
 
 // Traitement du formulaire de connexion
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
     // Sécurisation des entrées
-    $login = htmlspecialchars($_POST["login"]);
-    $password = $_POST["password"];
+    $login = htmlspecialchars($_POST['login']);
+    $password = $_POST['password'];
 
     // Chargement du fichier JSON contenant les utilisateurs
     $file = "../db/users.json";
@@ -16,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $users = json_decode(file_get_contents($file), true);
         foreach ($users as &$user) {
             // Vérification de l'identifiant et du mot de passe
-            if ($user["login"] === $login && password_verify($password, $user["password"])) {
+            if ($user['login'] === $login && password_verify($password, $user['password'])) {
                 // Démarrage de la session
                 $_SESSION["login"] = $login;
                 $_SESSION["role"] = $user["role"];
@@ -44,12 +45,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <!-- Formulaire de connexion -->
     <form method="POST">
-        <label for="login">Identifiant</label>
-        <input type="text" id="login" name="login" placeholder="Votre login" required>
+    <label for="login">Identifiant (ou email) :</label><br>
+    <input type="text" name="login" required><br><br>
 
-        <label for="password">Mot de passe</label>
-        <input type="password" id="password" name="password" placeholder="Votre mot de passe" required>
+    <label for="password">Mot de passe :</label><br>
+    <input type="password" name="password" required><br><br>
 
-        <button type="submit">Se connecter</button>
-    </form>
-</div>
+    <input type="submit" value="Se connecter">
+</form>
+
+
+<!-- Lien de mot de passe oublié -->
+<p><a href="motdepasseoublie.php" style="color:#ff99cc;">Mot de passe oublié ?</a></p>
