@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('getapikey.php');
+require ('getapikey.php');
 include 'header.php';
 
 // Récupération des données depuis l’URL (en GET)
@@ -24,13 +24,18 @@ $control_attendu = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $v
 
 // Comparaison du hash
 if ($control_attendu !== $control_recu) {
-    echo "<h2> Erreur de sécurité : vérification du paiement échouée.</h2>";
+    echo "<h2>❌ Erreur de sécurité : vérification du paiement échouée.</h2>";
     exit;
 }
 
 // Affichage du résultat selon le statut
 if ($statut === 'accepted') {
+    unset($_SESSION['panier']); // Vider le panier après paiement réussi
     echo "<h2>✅ Paiement accepté ! Merci pour votre commande.</h2>";
+    echo "<p>Vous allez être redirigé vers l'accueil dans quelques secondes...</p>";
+    header("refresh:5;url=accueil.php"); // Redirige après 5 secondes
 } else {
     echo "<h2>❌ Paiement refusé. Veuillez réessayer.</h2>";
+    echo "<p>Retour au panier dans quelques secondes...</p>";
+    header("refresh:5;url=panier.php");
 }
