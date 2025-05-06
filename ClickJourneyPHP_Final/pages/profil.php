@@ -29,7 +29,7 @@ if (!$currentUser) {
 ?>
 
 <div class="main-container">
-    <h1>Bienvenue, <?= htmlspecialchars($currentUser["pseudo"]) ?> </h1>
+    <h1>Bienvenue, <?= htmlspecialchars($currentUser["pseudo"]) ?> 👋</h1>
 
     <h2>Vos informations personnelles</h2>
     <ul>
