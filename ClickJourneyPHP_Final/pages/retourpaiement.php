@@ -33,7 +33,7 @@ if ($statut === 'accepted') {
     unset($_SESSION['panier']); // Vider le panier après paiement réussi
     echo "<h2>✅ Paiement accepté ! Merci pour votre commande.</h2>";
     echo "<p>Vous allez être redirigé vers l'accueil dans quelques secondes...</p>";
-    header("refresh:5;url=accueil.php"); // Redirige après 5 secondes
+    header("refresh:4;url=accueil.php"); // Redirige après 5 secondes
 } else {
     echo "<h2>❌ Paiement refusé. Veuillez réessayer.</h2>";
     echo "<p>Retour au panier dans quelques secondes...</p>";
