@@ -20,6 +20,7 @@
         <?php else: ?>
             <li><a href="connexion.php">Connexion</a></li>
             <li><a href="inscription.php">Inscription</a></li>
+            <li><a href="panier.php">Panier</a></li>
             <li><a href="paiement.php">Passez au paiement</a></li>
         <?php endif; ?>
     </ul>
