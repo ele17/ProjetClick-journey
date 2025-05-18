@@ -1,0 +1,98 @@
+[
+    {
+        "circuit_id": "c1",
+        "etape": 1,
+        "nom": "Le Syndicat",
+        "adresse": "51 Rue du Faubourg Saint-Denis",
+        "note": "4.8",
+        "image_url": "https://www.theworlds50best.com/discovery/filestore/jpg/LeSyndicat-Paris-France-02.jpg"
+    },
+    {
+        "circuit_id": "c1",
+        "etape": 2,
+        "nom": "Little Red Door",
+        "adresse": "60 Rue Charlot",
+        "note": "4.7",
+        "image_url": "https://media.cntraveler.com/photos/5a81e9a98ea5f04e2cf7739a/16:9/w_1920,c_limit/The-Red-Door_LRD-interior-%C2%A9Maxime-Prange%CC%81.jpg"
+    },
+    {
+        "circuit_id": "c1",
+        "etape": 3,
+        "nom": "Bisou",
+        "adresse": "15 Boulevard du Temple",
+        "note": "4.5",
+        "image_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/7a/72/da/photo0jpg.jpg?w=900&h=500&s=1"
+    },
+    {
+        "circuit_id": "c1",
+        "etape": 4,
+        "nom": "Danico",
+        "adresse": "6 Rue Vivienne",
+        "note": "4.7",
+        "image_url": "https://media.cntraveler.com/photos/5a81e9a5e9c49e2e4d80a385/16:9/w_1920,c_limit/Danico_1W2A0893.jpg"
+    },
+    {
+        "circuit_id": "c2",
+        "etape": 1,
+        "nom": "Moonshiner",
+        "adresse": "5 Rue Sedaine",
+        "note": "4.6",
+        "image_url": "https://media.cntraveler.com/photos/5a81e9a71eb1e03b9678c16d/16:9/w_1920,c_limit/Moonshiner_DSC_2734.jpg"
+    },
+    {
+        "circuit_id": "c2",
+        "etape": 2,
+        "nom": "Lavomatic",
+        "adresse": "30 Rue René Boulanger",
+        "note": "4.4",
+        "image_url": "https://www.pariszigzag.fr/wp-content/uploads/2020/08/lavomatic-paris-zigzag.png"
+    },
+    {
+        "circuit_id": "c2",
+        "etape": 3,
+        "nom": "L’Experimental Cocktail Club",
+        "adresse": "37 Rue Saint-Sauveur",
+        "note": "4.6",
+        "image_url": "https://cdn.prod.website-files.com/67b6f943f95bbe462f319fcc/67b6f943f95bbe462f31a10c_656764c1fbd2b429dc1e275c_IMG_0179-p-2000.jpg"
+    },
+    {
+        "circuit_id": "c2",
+        "etape": 4,
+        "nom": "No Entry",
+        "adresse": "20 Rue Dussoubs",
+        "note": "4.5",
+        "image_url": "https://media.timeout.com/images/105363522/image.jpg"
+    },
+    {
+        "circuit_id": "c3",
+        "etape": 1,
+        "nom": "Le China",
+        "adresse": "50 Rue de Charenton",
+        "note": "4.5",
+        "image_url": "https://media.timeout.com/images/100747667/image.jpg"
+    },
+    {
+        "circuit_id": "c3",
+        "etape": 2,
+        "nom": "Le Piano Vache",
+        "adresse": "8 Rue Laplace",
+        "note": "4.3",
+        "image_url": "https://media.timeout.com/images/100665969/750/422/image.jpg"
+    },
+    {
+        "circuit_id": "c3",
+        "etape": 3,
+        "nom": "Chez Georges",
+        "adresse": "11 Rue des Canettes",
+        "note": "4.4",
+        "image_url": "https://res.cloudinary.com/tf-lab/image/upload/restaurant/2f1dfbeb-ce56-4bb8-be01-ec02b431a29e/68d42231-0aba-455c-b8a4-1be0e1a42329.jpg"
+    },
+    {
+        "circuit_id": "c3",
+        "etape": 4,
+        "nom": "Le Baranaan",
+        "adresse": "7 Rue du Faubourg Saint-Martin",
+        "note": "4.4",
+        "image_url": "https://d2ghx89bmumb3r.cloudfront.net/news-upload/2393/baranaan-resto-indien-paris-5-w1200-h800.jpg"
+    }
+]

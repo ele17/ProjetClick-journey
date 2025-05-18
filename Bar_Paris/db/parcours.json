@@ -1,0 +1,26 @@
+[
+    {
+        "id": "c1",
+        "titre": "Cocktails d’auteur",
+        "resume": "Un voyage à travers les meilleurs bars à cocktails de Paris, pour les amateurs de mixologie.",
+        "duree": "3h",
+        "difficulte": "Facile",
+        "prix": "35€"
+    },
+    {
+        "id": "c2",
+        "titre": "Bars cachés et secrets",
+        "resume": "Découvrez les bars les plus confidentiels et insolites de la capitale.",
+        "duree": "4h",
+        "difficulte": "Modérée",
+        "prix": "40€"
+    },
+    {
+        "id": "c3",
+        "titre": "Cabaret & rétro",
+        "resume": "Un circuit festif dans des bars ambiance années 20 et cabarets intimistes.",
+        "duree": "3h30",
+        "difficulte": "Modérée",
+        "prix": "38€"
+    }
+]

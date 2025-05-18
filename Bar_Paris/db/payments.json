@@ -1,0 +1,44 @@
+[
+    {
+        "transaction_id": "6822313c47000",
+        "user": null,
+        "amount": "70.00",
+        "payment_date": "2025-05-12 17:35:35"
+    },
+    {
+        "transaction_id": "6822313c47000",
+        "user": null,
+        "amount": "70.00",
+        "payment_date": "2025-05-12 17:35:42"
+    },
+    {
+        "transaction_id": "6822313c47000",
+        "user": "inconnu",
+        "amount": "70.00",
+        "payment_date": "2025-05-12 17:38:31"
+    },
+    {
+        "transaction_id": "6822313c47000",
+        "user": "inconnu",
+        "amount": "70.00",
+        "payment_date": "2025-05-12 17:38:33"
+    },
+    {
+        "transaction_id": "6822322371d19",
+        "user": "inconnu",
+        "amount": "35.00",
+        "payment_date": "2025-05-12 17:38:51"
+    },
+    {
+        "transaction_id": "682232e0e4da7",
+        "user": "inconnu",
+        "amount": "75.00",
+        "payment_date": "2025-05-12 17:42:03"
+    },
+    {
+        "transaction_id": "682232e0e4da7",
+        "user": "inconnu",
+        "amount": "75.00",
+        "payment_date": "2025-05-12 17:42:07"
+    }
+]
