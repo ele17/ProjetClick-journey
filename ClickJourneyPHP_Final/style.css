@@ -1,8 +1,8 @@
-/* Styles globaux */
+/* Thème clair - style.css */
 body {
-    background-color: #2C2C2C;
-    color: #FFFFFF;
-    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #ff99cc;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -13,19 +13,19 @@ body {
     margin: auto;
 }
 
-/* Header */
 .header-container {
-    background-color: #6A0572;
+    background: linear-gradient(90deg, #ff99cc, #ff99cc);
     padding: 15px;
     text-align: center;
+    border-bottom: 3px solid #cc3399;
 }
 
 .header-container h1 {
     margin: 0;
     font-size: 2em;
+    color: #6a0572;
 }
 
-/* Navigation */
 .nav-container ul {
     list-style-type: none;
     padding: 0;
@@ -38,28 +38,93 @@ body {
 }
 
 .nav-container ul li a {
-    color: #FFFFFF;
+    color: #6a0572;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .nav-container ul li a:hover {
-    color: #F46036;
+    color: #ff99cc;
+    text-shadow: 0 0 5px #ff99cc;
 }
 
-/* Main content */
 .main-container {
-    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 2em;
     text-align: center;
 }
 
-/* Footer */
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 2em auto;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.circuit-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.circuit-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 1.4em;
+    color: #6a0572;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color:#ff99cc;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.button-link {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.button-link:hover {
+    background-color: #0056b3;
+}
+
 .footer-container {
-    background-color: #1E1B18;
+    background-color: #f0f0f0;
     padding: 10px;
     text-align: center;
+    color: #a48686;
 }
+
+/* Forms */
 form {
     display: flex;
     flex-direction: column;
@@ -89,38 +154,12 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #b3002a;
 }
 
 .form-links {
     margin-top: 10px;
     text-align: center;
-}
-
-
-
-/* Ajouts - Bar Chic Overlay */
-body {
-    background: #1f1b24;
-    color: #f5f5f5;
-}
-
-.header-container {
-    background: linear-gradient(90deg, #3d0d3a, #6A0572);
-    border-bottom: 3px solid #89216b;
-}
-
-.nav-container ul li a:hover {
-    color: #ff99cc;
-    text-shadow: 0 0 5px #ff99cc;
-}
-
-.main-container, .container {
-    background-color: #2c2533;
-    box-shadow: 0 0 15px rgba(255, 102, 178, 0.2);
-    border-radius: 10px;
-    padding: 1em;
-    margin-bottom: 2em;
 }
 
 /* Responsive */
@@ -129,4 +168,19 @@ body {
         display: block;
         margin: 10px 0;
     }
+
+    .circuit-cards-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        margin: 0,5em auto;
+    }
+
+    .main-container, .container {
+        padding: 0,5em;
+        margin: 0,5em;
+    }
+    
 }
